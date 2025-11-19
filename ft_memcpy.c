@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/16 22:35:09 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/19 13:31:55 by amtan            ###   ########.fr       */
+/*   Created: 2025/11/19 13:32:34 by amtan             #+#    #+#             */
+/*   Updated: 2025/11/19 13:42:13 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stddef.h>
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char		*p_dest;
+	const unsigned char	*p_src;
+	size_t				i;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-
-#endif
+	p_dest = (unsigned char *)dest;
+	p_src = (const unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		p_dest[i] = p_src[i];
+		i++;
+	}
+	return (dest);
+}
