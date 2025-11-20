@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 22:35:09 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/20 15:08:12 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/20 17:10:39 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
