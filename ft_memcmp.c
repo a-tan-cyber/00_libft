@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 17:49:23 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/20 19:26:27 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/22 11:35:25 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t					i;
-	const unsigned char		*c1;
-	const unsigned char		*c2;
+	size_t				i;
+	const unsigned char	*c1;
+	const unsigned char	*c2;
 
 	i = 0;
 	c1 = (const unsigned char *)s1;
@@ -29,4 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-

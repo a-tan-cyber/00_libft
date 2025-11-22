@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 13:24:17 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/20 19:26:47 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/22 11:36:05 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)p);
 	return (NULL);
 }
-
-
