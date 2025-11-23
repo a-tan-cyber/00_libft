@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 14:15:59 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/21 17:35:25 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/24 00:33:58 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		errno = ENOMEM;
 		return (NULL);
 	}
-	total = nmemb * size;
+	if (nmemb == 0 || size == 0)
+		total = 1;
+	else
+		total = nmemb * size;
 	p = malloc(total);
 	if (!p)
 	{
