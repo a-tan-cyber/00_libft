@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 20:56:34 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/22 22:08:43 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/23 20:05:27 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	len;
 	size_t	i;
 
-	if (!s || !f)
-		return (NULL);
 	len = ft_strlen(s);
 	new = malloc(len + 1);
 	if (!new)

@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 19:00:54 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/21 19:27:54 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/23 20:05:14 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	s1_len;
 	size_t	s2_len;
 
-	if (!s1 || !s2)
-		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	new = malloc(s1_len + s2_len + 1);

@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 19:35:49 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/21 22:04:03 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/23 20:13:07 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 	char	*new;
 
-	if (!s1)
-		return (NULL);
-	if (!set)
-		return (ft_strdup(s1));
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;

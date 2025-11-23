@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 18:37:38 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/21 18:55:09 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/23 20:12:06 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	size_t	sub_len;
 
-	if (!s)
-		return (NULL);
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 	{

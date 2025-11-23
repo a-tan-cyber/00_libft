@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 22:16:48 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/22 14:10:27 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/23 20:02:36 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ char	**ft_split(char const *s, char c)
 	size_t	arr_index;
 	size_t	word_count;
 
-	if (!s)
-		return (NULL);
 	word_count = count_words(s, c);
 	arr = malloc((word_count + 1) * sizeof(char *));
 	if (!arr)
