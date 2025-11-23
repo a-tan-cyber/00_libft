@@ -6,7 +6,7 @@
 #    By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 17:21:55 by amtan             #+#    #+#              #
-#    Updated: 2025/11/20 19:27:30 by amtan            ###   ########.fr        #
+#    Updated: 2025/11/23 23:53:09 by amtan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ $(NAME): $(OBJS)
 bonus: $(NAME) $(BONUS_OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(BONUS_OBJS)
 
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
