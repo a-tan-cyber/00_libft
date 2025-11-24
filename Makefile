@@ -6,7 +6,7 @@
 #    By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 17:21:55 by amtan             #+#    #+#              #
-#    Updated: 2025/11/24 11:12:29 by amtan            ###   ########.fr        #
+#    Updated: 2025/11/24 15:02:42 by amtan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,18 +38,16 @@ BONUS_SRCS			= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 
 BONUS_OBJS			= $(BONUS_SRCS:.c=.o)
 
-ALL_OBJS			= $(OBJS)
-
 ifeq ($(BONUS), 1)
-	ALL_OBJS    	= $(OBJS) $(BONUS_OBJS)
+ALL_OBJS    		= $(OBJS) $(BONUS_OBJS)
 else
-	ALL_OBJS    	= $(OBJS)
+ALL_OBJS    		= $(OBJS)
 endif
 
 all					: $(NAME)
 
 $(NAME)				: $(ALL_OBJS)
-						$(AR) $(ARFLAGS) $(NAME) $(ALL_OBJS)
+						$(AR) $(ARFLAGS) $@ $^
 
 bonus				:
 						$(MAKE) BONUS=1 $(NAME)
