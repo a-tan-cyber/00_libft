@@ -6,12 +6,11 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 18:09:04 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/21 18:58:21 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/24 14:54:09 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <errno.h>
 #include <stdlib.h>
 
 char	*ft_strdup(const char *s)
@@ -22,10 +21,7 @@ char	*ft_strdup(const char *s)
 	total = ft_strlen(s) + 1;
 	dup = malloc(total);
 	if (!dup)
-	{
-		errno = ENOMEM;
 		return (NULL);
-	}
 	ft_memcpy(dup, s, total);
 	return (dup);
 }
