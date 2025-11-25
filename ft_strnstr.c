@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 18:31:45 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/20 19:27:02 by amtan            ###   ########.fr       */
+/*   Updated: 2025/11/25 14:21:10 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (*little == '\0')
 		return ((char *)big);
 	little_len = ft_strlen(little);
-	if (little_len > len)
-		return (NULL);
 	i = 0;
 	while (big[i] != '\0' && i + little_len <= len)
 	{
