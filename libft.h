@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 22:35:09 by amtan             #+#    #+#             */
-/*   Updated: 2025/11/24 10:54:05 by amtan            ###   ########.fr       */
+/*   Updated: 2025/12/04 13:40:31 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,10 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+
+char				**ft_split_set(char const *s, char const *d);
+unsigned long long	ft_atoull(const char *nptr);
+
 typedef struct s_list
 {
 	void			*content;
