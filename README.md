@@ -77,6 +77,13 @@ These higher-level utilities are not direct clones of libc functions, but are ex
 * `ft_putendl_fd` — Write a string followed by a newline.
 * `ft_putnbr_fd` — Write the decimal representation of an integer.
 
+### Extra utility functions
+
+These functions are custom additions on top of the subject's mandatory list:
+
+* `ft_atoull` — Convert a string to an `unsigned long long`, ignoring leading whitespace, handling an optional `+`, and returning `0` if a negative sign is found.
+* `ft_split_set` — Variant of `ft_split` that splits a string using any character from a set `d` as a delimiter, instead of a single delimiter character.
+
 ### Singly linked list API
 
 The current Libft subject also includes a minimal singly-linked list API as part of the mandatory project. It is based on the following structure:
