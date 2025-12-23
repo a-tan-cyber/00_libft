@@ -6,7 +6,7 @@
 #    By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/18 17:21:55 by amtan             #+#    #+#              #
-#    Updated: 2025/12/08 23:02:21 by amtan            ###   ########.fr        #
+#    Updated: 2025/12/23 19:32:13 by amtan            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ OBJS				= $(SRCS:.c=.o)
 
 all					: $(NAME)
 
-$(NAME)				: $(ALL_OBJS)
+$(NAME)				: $(OBJS)
 						$(AR) $(ARFLAGS) $@ $^
 
 %.o					: %.c $(HDRS)
