@@ -6,7 +6,7 @@
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 22:16:48 by amtan             #+#    #+#             */
-/*   Updated: 2025/12/04 13:34:28 by amtan            ###   ########.fr       */
+/*   Updated: 2025/12/24 23:07:02 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,12 @@ static size_t	count_words(char const *s, char const *d)
 	word_count = 0;
 	while (s[i] != '\0')
 	{
-		while (ft_strchr(d, s[i]))
+		while (s[i] != '\0' && ft_strchr(d, s[i]))
 			i++;
 		if (s[i] == '\0')
 			break ;
 		word_count++;
-		while (!ft_strchr(d, s[i]) && s[i] != '\0')
+		while (s[i] != '\0' && !ft_strchr(d, s[i]))
 			i++;
 	}
 	return (word_count);
@@ -68,7 +68,7 @@ static char	**fill_arr(char const *s, char const *d, char **arr,
 	s_index = 0;
 	while (s[s_index] != '\0')
 	{
-		while (ft_strchr(d, s[s_index]))
+		while (s[s_index] != '\0' && ft_strchr(d, s[s_index]))
 			s_index++;
 		if (s[s_index] != '\0')
 		{
