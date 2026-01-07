@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_atoull.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amtan <amtan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/06 13:54:06 by amtan             #+#    #+#             */
-/*   Updated: 2025/12/27 18:24:54 by amtan            ###   ########.fr       */
+/*   Created: 2025/12/04 12:00:00 by amtan             #+#    #+#             */
+/*   Updated: 2025/12/04 13:36:56 by amtan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
+unsigned long long	ft_atoull(const char *nptr)
+{
+	unsigned long long	result;
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
-# endif
-
-char	*get_next_line(int fd);
-char	*free_and_ret_null(char *stash);
-size_t	gnl_strlen(char *s);
-char	*gnl_strjoin(char *stash, char *buffer);
-char	*gnl_strchr(char *s, char c);
-
-#endif
+	result = 0;
+	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
+		nptr++;
+	if (*nptr == '+')
+		nptr++;
+	if (*nptr == '-')
+		return (0);
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		result = result * 10 + (unsigned long long)(*nptr - '0');
+		nptr++;
+	}
+	return (result);
+}
